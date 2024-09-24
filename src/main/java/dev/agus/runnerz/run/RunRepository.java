@@ -20,8 +20,8 @@ public class RunRepository {
 
     @PostConstruct
     private void init() {
-        runs.add(new Run(1, "Morning Run", LocalDateTime.now(), LocalDateTime.now().plus(50, ChronoUnit.MINUTES), 5, Location.OUTDOORS));
-        runs.add(new Run(2, "Evening Run", LocalDateTime.now(), LocalDateTime.now().plus(50, ChronoUnit.MINUTES), 5, Location.INDOORS));
+        runs.add(new Run(1, "Morning Run", LocalDateTime.now(), LocalDateTime.now().plus(50, ChronoUnit.MINUTES), 5, Location.OUTDOOR));
+        runs.add(new Run(2, "Evening Run", LocalDateTime.now(), LocalDateTime.now().plus(50, ChronoUnit.MINUTES), 5, Location.INDOOR    ));
     }
 
 
@@ -33,5 +33,14 @@ public class RunRepository {
 
     void create(Run run) {
         runs.add(run);
+    }
+
+    void update(Run run, Integer id) {
+        Optional<Run> existingRun = findById(id);
+        existingRun.ifPresent(value -> runs.set(runs.indexOf(value), run));
+    }
+
+    void delete(Integer id) {
+        runs.removeIf(run -> run.id().equals(id));
     }
 }
