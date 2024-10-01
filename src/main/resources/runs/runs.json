@@ -1,0 +1,44 @@
+{
+  "runs": [
+    {
+      "id": 1,
+      "title": "Morning Run",
+      "startedOn": "2024-09-29T17:35:45.547336",
+      "completedOn": "2024-09-29T18:35:45.548086",
+      "miles": 5,
+      "location": "OUTDOOR"
+    },
+    {
+      "id": 2,
+      "title": "Evening Run",
+      "startedOn": "2024-09-29T16:35:45.583942",
+      "completedOn": "2024-09-29T18:35:45.583989",
+      "miles": 10,
+      "location": "INDOOR"
+    },
+    {
+      "id": 3,
+      "title": "Afternoon Run",
+      "startedOn": "2024-09-29T15:35:45.587268",
+      "completedOn": "2024-09-29T18:35:45.587307",
+      "miles": 15,
+      "location": "INDOOR"
+    },
+    {
+      "id": 4,
+      "title": "Night Run",
+      "startedOn": "2024-09-29T14:35:45.587895",
+      "completedOn": "2024-09-29T18:35:45.587917",
+      "miles": 20,
+      "location": "OUTDOOR"
+    },
+    {
+      "id": 5,
+      "title": "Midnight Run",
+      "startedOn": "2024-09-29T13:35:45.588365",
+      "completedOn": "2024-09-29T18:35:45.588382",
+      "miles": 25,
+      "location": "INDOOR"
+    }
+  ]
+}
