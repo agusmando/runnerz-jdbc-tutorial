@@ -1,4 +1,6 @@
-CREATE TABLE IF NOT EXISTS Run (
+
+
+CREATE TABLE IF NOT EXISTS run (
     id INT NOT NULL,
     title VARCHAR(255) NOT NULL,
     started_on timestamp NOT NULL,

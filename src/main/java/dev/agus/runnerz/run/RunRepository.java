@@ -31,7 +31,7 @@ public class RunRepository {
 
     public Optional<Run> findById(Integer id) {
         return jdbcClient
-                .sql("SELECT id,    title,started_on,completed_on,miles,location FROM run WHERE id = :id")
+                .sql("SELECT id,title,started_on,completed_on,miles,location FROM run WHERE id = :id")
                 .param("id", id)
                 .query(Run.class)
                 .optional();
@@ -41,7 +41,7 @@ public class RunRepository {
 
     public void create(Run run) {
         var updated = jdbcClient
-                .sql("INSERT INTO run(id,title,started_on,completed_on,miles,location) VALUES(?,?,?,?,?,?)")
+                .sql("INSERT INTO run (id,title,started_on,completed_on,miles,location) VALUES(?,?,?,?,?,?)")
                 .params(List.of(run.id(), run.title(), run.startedOn(), run.completedOn(), run.miles(), run.location().toString()))
                 .update();
         Assert.state(updated == 1, "Failed to insert run " + run.title());
